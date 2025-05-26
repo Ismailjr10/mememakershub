@@ -36,9 +36,9 @@ export function Navigation() {
             <img 
               src="/attached_assets/WhatsApp Image 2025-05-10 at 22.26.29_b13f022c.jpg" 
               alt="MemeMakers Hub"
-              className="w-10 h-10 rounded-lg object-cover"
+              className="w-10 h-10 rounded-lg object-contain"
             />
-            <span className="text-xl font-bold text-secondary">MemeMakers Hub</span>
+            <span className="text-xl font-bold text-neutral-900">MemeMakers Hub</span>
           </Link>
 
           {/* Desktop Navigation */}

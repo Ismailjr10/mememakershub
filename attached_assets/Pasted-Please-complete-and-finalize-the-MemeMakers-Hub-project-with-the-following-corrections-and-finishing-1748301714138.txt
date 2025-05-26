@@ -1,0 +1,150 @@
+Please complete and finalize the MemeMakers Hub project with the following corrections and finishing steps:
+
+---
+
+🎨 1. TEXT VISIBILITY FIX
+- Search the entire project (especially `client/src`) for all:
+  - `text-white`, `text-gray-100`, `text-gray-200`, `text-slate-100`, or similar light text classes
+- Replace them with:
+  - `text-black` or `text-neutral-900` or `text-brand-text` (if configured)
+
+✅ Ensure all text is readable on white/light backgrounds on:
+- Hero sections
+- Cards
+- Buttons
+- Footer
+- Navbar
+- Dashboard
+- Forms
+
+---
+
+📘 2. ADD & FIX `/docs` PAGE (Developer Documentation)
+
+- Create a new route: `/docs`
+- Page name: `docs-page.tsx` or similar
+- Add it to the router in `App.tsx` or wherever routes are defined
+- Populate it with the following exact content (use code blocks where shown):
+
+---
+
+🧱 **Overview**  
+MemeMakers Hub is a React + Firebase-powered Web3 marketing platform offering digital services for meme projects, NFT collections, DAOs, and startups.
+
+---
+
+🔐 **Authentication**  
+Firebase Auth enabled  
+Supports: Google Sign-In, Email/Password
+
+---
+
+🔥 **Firebase Config**  
+- Firestore: stores bookings, referrals, and admin data  
+- Auth: user registration, login, admin claims
+
+---
+
+🌐 **Pages**                                             / - Home
+/services - Lists core offerings
+/marketplace - Interactive cards with booking
+/membership - Pricing tiers and subscription info
+/dashboard - User’s referral stats, bookings
+/admin - Task approvals, user management
+/terms - Terms of Service
+/privacy - Privacy Policy
+/help - Help Center
+/contact - Contact Us
+/docs - Developer Documentation                                                        
+---
+
+📄 **Booking Form**
+```json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "service": "Community Growth",
+  "referralCode": "abc123",
+  "createdAt": "timestamp"
+}                                                                   💸 Payments
+
+ETH address: 0xD96870Eb59987688BcE09b2D3423a3665133B5cc
+
+SOL address: 9muDjFKPbyY6rvLnVAPrqCjtx5Eb4syy4WdRqb3yL8Bi
+
+Wallet connect: MetaMask + Phantom
+
+Payment buttons trigger onClick wallet send, with toast feedback
+
+🧾 Referral Tracking
+
+Referral code from ?ref=abc123 stored in localStorage
+
+Attached to booking form if user completes it
+
+Referral commissions tracked in /referrals collection in Firestore
+
+🎖 NFT Badge (Future)
+
+Placeholder NFTBadge.tsx component exists
+
+Uses Thirdweb SDK
+
+Prepared for Polygon, Base, or BNB Chain
+
+Requires contract address to activate
+
+📞 Contact & Support
+
+Contact form submits to Firestore (or fallback to mailto:mememakershub@gmail.com)
+
+Help Center is a static FAQ-style page
+
+✅ Style the documentation using the same layout and branding as the rest of the site.
+
+🧼 3. VERIFY STATIC ROUTES (FIX 404s)
+
+Ensure the following pages are all working (not 404):
+
+/terms
+
+/privacy
+
+/help
+
+/contact
+
+/docs
+
+If any are missing:
+
+Create and add the .tsx page in src/pages
+
+Register the route in your router setup
+
+🧪 4. FINAL DEBUG & CLEANUP BEFORE DEPLOYMENT
+
+Run a full debug scan across the entire project
+
+Ensure:
+
+No broken imports
+
+All routes are mapped correctly
+
+All Firebase logic is live (not mocked)
+
+Wallet connect works (MetaMask + Phantom)
+
+Contact form, bookings, and referrals save to Firestore
+
+All buttons are clickable
+
+Mobile responsiveness is preserved
+
+Console is clear of warnings and errors
+
+✅ This is the final pass before live deployment. No placeholders or broken UI should remain.
+
+Let me know when the final version is complete so I can proceed with launch and testing.
+

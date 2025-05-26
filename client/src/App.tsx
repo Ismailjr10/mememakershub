@@ -18,6 +18,7 @@ import Terms from "@/pages/terms";
 import Privacy from "@/pages/privacy";
 import Contact from "@/pages/contact";
 import Help from "@/pages/help";
+import Docs from "@/pages/docs";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -35,6 +36,7 @@ function Router() {
       <Route path="/privacy" component={Privacy} />
       <Route path="/contact" component={Contact} />
       <Route path="/help" component={Help} />
+      <Route path="/docs" component={Docs} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

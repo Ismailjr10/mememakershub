@@ -32,7 +32,7 @@ export function HeroSection() {
                   From Concept
                 </span>
                 <br />
-                <span className="text-secondary">to Moon.</span>
+                <span className="text-neutral-900">to Moon.</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
                 We build, You shine. The ultimate Web3 growth platform for meme projects and crypto communities.
