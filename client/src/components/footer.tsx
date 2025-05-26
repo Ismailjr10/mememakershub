@@ -36,10 +36,8 @@ const footerSections = [
 ];
 
 const socialLinks = [
-  { icon: FaTwitter, href: "https://twitter.com/mememakershub", label: "Twitter" },
-  { icon: FaDiscord, href: "https://discord.gg/mememakershub", label: "Discord" },
-  { icon: FaTelegram, href: "https://t.me/mememakershub", label: "Telegram" },
-  { icon: FaGithub, href: "https://github.com/mememakershub", label: "GitHub" },
+  { icon: FaTwitter, href: "https://x.com/mememakershub", label: "Twitter" },
+  { icon: FaTelegram, href: "https://t.me/+xmr1qGCVdAc5YThk", label: "Telegram" },
 ];
 
 export function Footer() {

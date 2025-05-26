@@ -67,8 +67,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
       setIsLoading(false);
     });
 
-    // Handle redirect result on app load
-    handleRedirect().catch(console.error);
+    // Firebase auth state changes handled above
 
     return unsubscribe;
   }, []);
