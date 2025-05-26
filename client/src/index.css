@@ -13,18 +13,19 @@
   --card-foreground: 222 84% 5%;
   --border: 214 32% 91%;
   --input: 214 32% 91%;
-  --primary: 213 94% 68%; /* #3B82F6 */
+  --primary: 188 100% 50%; /* Cyan from logo */
   --primary-foreground: 210 40% 98%;
   --secondary: 210 40% 96%;
   --secondary-foreground: 222 47% 11%; /* #1F2937 */
-  --accent: 262 83% 58%; /* #6366F1 */
+  --accent: 308 100% 50%; /* Magenta from logo */
   --accent-foreground: 210 40% 98%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
-  --ring: 213 94% 68%;
-  --radius: 0.5rem;
+  --ring: 188 100% 50%;
+  --radius: 0.75rem;
   --success: 142 71% 45%; /* #10B981 */
-  --warning: 38 92% 50%; /* #F59E0B */
+  --warning: 45 93% 58%; /* Golden yellow from logo */
+  --moon: 270 50% 40%; /* Purple from logo */
 }
 
 .dark {

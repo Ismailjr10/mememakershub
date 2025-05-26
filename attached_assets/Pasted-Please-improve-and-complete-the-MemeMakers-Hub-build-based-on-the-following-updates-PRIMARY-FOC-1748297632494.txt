@@ -1,0 +1,117 @@
+Please improve and complete the MemeMakers Hub build based on the following updates:
+
+🎯 PRIMARY FOCUS
+
+Fix the Membership and Marketplace pages to reflect real services and pricing
+
+Apply colors and style that match our uploaded logo (crescent moon with star)
+
+Do not use location-based pricing. All prices are in USD only.
+
+Ensure all layout is responsive, modern, and clean
+
+Also use the image attach as the logo
+
+🎨 VISUAL + THEME
+
+Base all colors on the uploaded logo.png
+
+Primary colors should be inspired by the logo colors
+
+Use Inter font family with shadcn/ui components
+
+Respect Web3-friendly, clean layouts (rounded corners, hover cards, gradient buttons, etc.)
+
+💰 PRICING TO IMPLEMENT (Marketplace & Membership Page)
+
+Meme Creation
+
+Basic Pack: 3 memes — $30
+
+Standard Pack: 5 memes — $45
+
+Premium Pack: 10 memes — $80
+
+Delivery: 24–48 hours
+
+Design Services
+
+Logo Design: $100
+
+Banner Design: $30
+
+Shilling Packages
+
+Basic Push (5 groups/accounts): $40
+
+Mid Push (15 groups/accounts): $100
+
+Aggressive Push (50+ outlets, includes memes, tag & keyword seeding): $Custom or leave a quote form
+
+Community Management
+
+Lite CM (8 hrs/day): $80
+
+Full CM (24/7 coverage): $250
+
+Thread Writing
+
+1 Thread (5–8 tweets): $50
+
+3 Threads Bundle: $130
+
+Raiding Services
+
+Starter Raid — $25/day (10 accounts, 3 hrs/day)
+
+Growth Raid — $50/day (25 accounts, 6 hrs/day)
+
+Viral Push — $100/day (50 accounts, 12 hrs/day)
+
+24H Takeover — $200/day (100 accounts, 16 hrs/day)
+
+Marketing Campaign
+
+Leave as a custom quote form (not priced)
+
+✅ For each of the services above:
+
+Add them as cards in the Marketplace page with short descriptions and prices
+
+Add "Book Now" or "Start" buttons that open a booking modal/form (connects to Firebase)
+
+🧾 BOOKING FORM (in modal)
+
+Name
+
+Email
+
+Project Link
+
+Service Type (dropdown)
+
+Referral Code (optional)
+
+📊 MEMBERSHIP PAGE
+
+Remove old mock tiers
+
+Instead, break pricing into clear service sections (same as above)
+
+Add discount text: “💡 30% discount available on 6- or 12-month packages” (only as a static note)
+
+🧩 OTHER INSTRUCTIONS
+
+Keep wallet connect (MetaMask and Phantom) as-is
+
+Keep Firebase config already connected
+
+Leave placeholders only for Thirdweb NFT Badge and Crisp chat
+
+Keep Admin Panel and Analytics Pages wired up, even if minimal
+
+Ensure all pages are responsive and use reusable UI components
+
+✅ Reminder: This is a live product — no mockups or placeholders allowed except where explicitly marked.
+
+Let me know when the updates are complete so I can continue testing.
