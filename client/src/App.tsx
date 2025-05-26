@@ -14,6 +14,10 @@ import Analytics from "@/pages/analytics";
 import Auth from "@/pages/auth";
 import Dashboard from "@/pages/dashboard";
 import Admin from "@/pages/admin";
+import Terms from "@/pages/terms";
+import Privacy from "@/pages/privacy";
+import Contact from "@/pages/contact";
+import Help from "@/pages/help";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -27,6 +31,10 @@ function Router() {
       <Route path="/auth" component={Auth} />
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/admin" component={Admin} />
+      <Route path="/terms" component={Terms} />
+      <Route path="/privacy" component={Privacy} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/help" component={Help} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

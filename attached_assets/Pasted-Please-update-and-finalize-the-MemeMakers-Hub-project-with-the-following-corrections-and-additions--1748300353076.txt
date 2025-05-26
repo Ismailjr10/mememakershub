@@ -1,0 +1,157 @@
+Please update and finalize the MemeMakers Hub project with the following corrections and additions. This build is live-facing — no mockups, no placeholders.
+
+🎯 1. ✅ AUTHENTICATION (FIX)
+
+Enable Firebase Email and Password sign up and login alongside Google
+
+Update /auth page to include:
+
+Email + Password form fields
+
+"Forgot Password" link
+
+Switch between Login / Sign Up mode
+
+Use Firebase Auth (already configured)
+
+📜 2. ✅ TERMS, PRIVACY, CONTACT, HELP CENTER
+
+Create separate routes/pages for:
+
+/terms – Terms of Service
+
+/privacy – Privacy Policy
+
+/help – Help Center
+
+/contact – Contact Us
+
+Each should be responsive and contain:
+
+terms-page.tsx, privacy-page.tsx, etc.
+
+Use static content from uploaded spec or placeholder text that can be edited
+
+Add working contact form on /contact:
+
+Fields: Name, Email, Message
+
+Submissions should go to mememakershub@gmail.com or Firestore
+
+Ensure none of these pages return 404 errors anymore
+
+💸 3. ✅ ETH ➝ USD PRICING CONVERSION
+
+Homepage Pricing Plans (Replace ETH with USD):
+
+Pro Plan
+
+💰 $300/month
+
+Everything in Basic
+
+15% discount on all services
+
+Advanced analytics & insights
+
+Priority support
+
+Referral commission: 5%
+
+Exclusive NFT badges
+
+Enterprise Plan
+
+💰 $1200/month
+
+Everything in Pro
+
+25% discount on all services
+
+Dedicated account manager
+
+24/7 priority support
+
+Referral commission: 10%
+
+Custom integrations
+
+📦 4. ✅ FEATURED SERVICES (USD PRICES)
+
+Update all ETH prices in the "Featured Services" section to USD:
+
+Meme Token Launch
+
+$950
+
+Complete token launch package including smart contract, website, and initial marketing push.
+
+NFT Collection Design
+
+$600
+
+Custom NFT artwork and collection design with metadata generation and rarity distribution.
+
+Community Building
+
+$400
+
+30-day intensive community growth campaign with organic follower acquisition and engagement.
+
+Ensure "Book Now" buttons still work and trigger booking flow.
+
+🎨 5. ✅ UI & BRANDING FIXES
+
+🔗 Socials: Keep ONLY:
+
+Twitter: https://x.com/mememakershub
+
+Telegram: https://t.me/+xmr1qGCVdAc5YThk
+
+Remove Discord, Instagram, Facebook, etc.
+
+🎨 Colors: No text or icon should be white (#ffffff) or ash (#e5e5e5, gray-100, etc.)
+
+Replace with brand colors inspired by the logo:
+
+Indigo: #6366F1
+
+Accent Blue: #3B82F6
+
+Light backgrounds: #F9FAFB
+
+Text: #111827
+
+🌓 Dark mode should remain supported but match these tones
+
+📍 6. ✅ NAVIGATION & ROUTING
+
+Fix all broken routes that return 404, especially:
+
+/contact
+
+/help
+
+/terms
+
+/privacy
+
+Add links to footer or navbar for:
+
+Terms of Service
+
+Privacy Policy
+
+Help Center
+
+Contact Us
+
+✅ Reminder:
+
+Do not leave any mockups or placeholders unless explicitly stated
+
+All buttons and routes must be functional
+
+Firebase and wallet integration already exist — don’t break them
+
+Let me know when this updated version is complete so I can test and deploy.

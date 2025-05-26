@@ -1,0 +1,157 @@
+Here are what should be in the terms if service, privacy policy and documentation: ✅ 1. Terms of Service (Effective: May 26, 2025)
+Welcome to MemeMakers Hub!
+
+By accessing or using our website or services, you agree to comply with and be bound by the following Terms of Service. If you do not agree with these terms, please do not use MemeMakers Hub.
+
+1. Use of Services
+MemeMakers Hub offers digital services including but not limited to meme creation, community management, NFT design, smart contract deployment, social media marketing, and growth advisory. You agree to use these services for lawful purposes only.
+
+2. User Accounts
+To access certain services, you may be required to register an account. You agree to provide accurate and complete information, keep your credentials secure, and notify us immediately of any unauthorized use.
+
+3. Payments
+All prices are listed in USD. Payments for services are made via integrated crypto wallets (ETH and SOL) or through our booking interface. All payments are non-refundable unless otherwise stated.
+
+4. Service Delivery
+Turnaround time varies by service and is stated on each service page. While we strive to meet deadlines, delays caused by third parties, blockchain congestion, or user-side issues are not the responsibility of MemeMakers Hub.
+
+5. Referrals & Rewards
+Referral codes are optional. Users are entitled to commissions only if referrals meet the criteria outlined in the referral program page.
+
+6. NFT Badges
+We may issue exclusive NFT badges to users. These are non-transferable, symbolic achievements and do not represent ownership or financial rights.
+
+7. Limitation of Liability
+MemeMakers Hub shall not be liable for any indirect, incidental, or consequential damages, including loss of profits or data, arising out of the use or inability to use our services.
+
+8. Modifications
+We reserve the right to modify these Terms at any time. Updates will be posted on this page. Continued use of our services after changes constitutes acceptance.
+
+9. Contact
+For questions regarding these Terms, contact us at mememakershub@gmail.com.
+
+✅ 2. Privacy Policy (Effective: May 26, 2025)
+MemeMakers Hub respects your privacy.
+
+This Privacy Policy explains how we collect, use, and protect your data when you use our website or services.
+
+1. Information We Collect
+We collect:
+
+Basic account info (email, wallet address)
+
+Booking form data (name, project, email)
+
+Referral code if provided
+
+Technical info (browser type, IP, timestamps)
+
+We do not collect your private wallet keys, nor do we store payment details directly.
+
+2. Use of Information
+We use your data to:
+
+Deliver services you request
+
+Contact you about your bookings
+
+Improve platform functionality
+
+Track referrals and usage trends
+
+3. Data Storage
+All data is securely stored on Google Firebase infrastructure. Firestore security rules are applied to protect against unauthorized access.
+
+4. Sharing of Information
+We do not sell or rent your data. We may share limited data:
+
+With service partners to fulfill your orders
+
+To comply with legal obligations
+
+5. Cookies & Analytics
+We may use cookies and analytics tools to track usage and improve user experience. You can control cookie settings through your browser.
+
+6. Your Rights
+You have the right to:
+
+Request access to your data
+
+Request deletion of your data
+
+Unsubscribe from communications
+
+To exercise these rights, email us at mememakershub@gmail.com.
+
+7. Changes to this Policy
+We may update this Privacy Policy from time to time. Changes will be reflected here with an updated date.
+
+✅ 3. Developer Documentation (for internal or partner use)
+🧱 Overview
+MemeMakers Hub is a React + Firebase-powered Web3 marketing platform offering digital services for meme projects, NFT collections, DAOs, and startups.
+
+🔐 Authentication
+Firebase Auth enabled
+
+Supports: Google Sign-In, Email/Password
+
+🔥 Firebase Config
+Firestore: stores bookings, referrals, and admin data
+
+Auth: user registration, login, admin claims
+
+🌐 Pages
+/: Home
+
+/services: Lists core offerings
+
+/marketplace: Interactive cards with booking
+
+/membership: Pricing tiers and subscription info
+
+/dashboard: User’s referral stats, bookings
+
+/admin: Task approvals, user management
+
+/terms, /privacy, /help, /contact: Static info pages
+
+📄 Booking Form
+Submits to Firestore:
+
+json
+Copy
+Edit
+{
+  name: "John Doe",
+  email: "john@example.com",
+  service: "Community Growth",
+  referralCode: "abc123",
+  createdAt: timestamp
+}
+💸 Payments
+ETH address: 0xD96870Eb59987688BcE09b2D3423a3665133B5cc
+
+SOL address: 9muDjFKPbyY6rvLnVAPrqCjtx5Eb4syy4WdRqb3yL8Bi
+
+Wallet connect: MetaMask + Phantom
+
+Payment buttons trigger onClick wallet send, with toast feedback
+
+🧾 Referral Tracking
+Referral code from ?ref=abc123 stored in localStorage
+
+Attached to booking data if user completes form
+
+Commission tracked in /referrals collection
+
+🎖 NFT Badge (Future)
+Placeholder NFTBadge.tsx component uses Thirdweb SDK
+
+Requires contract address to enable mint
+
+Prepared for Polygon, Base, or BNB Chain
+
+📞 Contact & Support
+Contact form submits to Firestore (or mailto: fallback)
+
+Help center is a static FAQ-style page

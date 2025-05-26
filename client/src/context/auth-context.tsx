@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 import { User as FirebaseUser, onAuthStateChanged } from "firebase/auth";
-import { auth, handleRedirect } from "@/lib/firebase";
+import { auth, signInWithGoogle, signOutUser } from "@/lib/firebase";
 import { apiRequest } from "@/lib/queryClient";
 import type { User } from "@shared/schema";
 
