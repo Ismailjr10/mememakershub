@@ -10,11 +10,11 @@ import {
 } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: `${import.meta.env.VITE_FIREBASE_PROJECT_ID}.firebaseapp.com`,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: `${import.meta.env.VITE_FIREBASE_PROJECT_ID}.firebasestorage.app`,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  apiKey: import.meta.env."AIzaSyCYgzdY8gQbrakeCRxDcC3H5_gW24IdFUA",
+  authDomain: `${import.meta.env."mememakershub-e9c87.firebaseapp.com"}.firebaseapp.com`,
+  projectId: import.meta.env."mememakershub-e9c87",
+  storageBucket: `${import.meta.env."mememakershub-e9c87.firebasestorage.app"}.firebasestorage.app`,
+  appId: import.meta.env."1:421757168673:web:e95875de93f80abfd00760",
 };
 
 const app = initializeApp(firebaseConfig);
