@@ -1,45 +1,67 @@
-import { initializeApp } from "firebase/app";
-import { 
-  getAuth, 
-  signInWithPopup, 
-  GoogleAuthProvider, 
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-  sendPasswordResetEmail,
-  signOut 
-} from "firebase/auth";
+import { z } from "zod";
 
-const firebaseConfig = {
-  apiKey: import.meta.env."AIzaSyCYgzdY8gQbrakeCRxDcC3H5_gW24IdFUA",
-  authDomain: `${import.meta.env."mememakershub-e9c87.firebaseapp.com"}.firebaseapp.com`,
-  projectId: import.meta.env."mememakershub-e9c87",
-  storageBucket: `${import.meta.env."mememakershub-e9c87.firebasestorage.app"}.firebasestorage.app`,
-  appId: import.meta.env."1:421757168673:web:e95875de93f80abfd00760",
+const UserCredentialSchema = z.object({
+  uid: z.string(),
+});
+
+export const signInWithGoogle = async () => {
+  // This would need a server-side implementation to handle the Google sign-in flow
+  throw new Error("Google sign-in is not implemented");
 };
 
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+export const signInWithEmail = async (email: string, password: string) => {
+  const response = await fetch("/api/auth/sign-in", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password }),
+  });
 
-const provider = new GoogleAuthProvider();
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message);
+  }
 
-export const signInWithGoogle = () => {
-  return signInWithPopup(auth, provider);
+  const data = await response.json();
+  return UserCredentialSchema.parse(data);
 };
 
-export const signInWithEmail = (email: string, password: string) => {
-  return signInWithEmailAndPassword(auth, email, password);
+export const signUpWithEmail = async (email: string, password: string) => {
+  const response = await fetch("/api/auth/sign-up", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password }),
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message);
+  }
+
+  const data = await response.json();
+  return UserCredentialSchema.parse(data);
 };
 
-export const signUpWithEmail = (email: string, password: string) => {
-  return createUserWithEmailAndPassword(auth, email, password);
+export const resetPassword = async (email: string) => {
+  const response = await fetch("/api/auth/reset-password", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email }),
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message);
+  }
 };
 
-export const resetPassword = (email: string) => {
-  return sendPasswordResetEmail(auth, email);
+export const signOutUser = async () => {
+  await fetch("/api/auth/sign-out", { method: "POST" });
 };
 
-export const signOutUser = () => {
-  return signOut(auth);
+// Mock Auth object for compatibility
+export const auth = {
+  onAuthStateChanged: (callback: (user: { uid: string } | null) => void) => {
+    // This would need to be implemented with a session mechanism
+    return () => {};
+  },
 };
-
-export default app;

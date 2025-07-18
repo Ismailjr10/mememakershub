@@ -29,13 +29,13 @@ export function HeroSection() {
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  From Concept
+                  From concept to Moon.
                 </span>
                 <br />
-                <span className="text-neutral-900">to Moon.</span>
+                <span className="text-neutral-900">We build, You shine.</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                We build, You shine. The ultimate Web3 growth platform for meme projects and crypto communities.
+                The ultimate Web3 growth platform for meme projects and crypto communities.
               </p>
             </div>
             
