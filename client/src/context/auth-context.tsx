@@ -1,12 +1,11 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
-import { User as FirebaseUser, onAuthStateChanged } from "firebase/auth";
 import { auth, signInWithGoogle, signOutUser } from "@/lib/firebase";
 import { apiRequest } from "@/lib/queryClient";
 import type { User } from "@shared/schema";
 
 interface AuthContextType {
   user: User | null;
-  firebaseUser: FirebaseUser | null;
+  firebaseUser: { uid: string; displayName: string; email: string; } | null;
   isLoading: boolean;
   signIn: () => Promise<void>;
   signOut: () => Promise<void>;
@@ -29,12 +28,13 @@ interface AuthProviderProps {
 
 export function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User | null>(null);
-  const [firebaseUser, setFirebaseUser] = useState<FirebaseUser | null>(null);
+  const [firebaseUser, setFirebaseUser] = useState<{ uid: string; displayName: string; email: string; } | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
-      setFirebaseUser(firebaseUser);
+    // This is a mock implementation of onAuthStateChanged
+    const unsubscribe = auth.onAuthStateChanged(async (firebaseUser) => {
+      setFirebaseUser(firebaseUser as any);
       
       if (firebaseUser) {
         try {
@@ -52,8 +52,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
             // User doesn't exist, create new user
             const newUser = await apiRequest("POST", "/api/users", {
               firebaseUid: firebaseUser.uid,
-              username: firebaseUser.displayName || firebaseUser.email?.split("@")[0] || "user",
-              email: firebaseUser.email || "",
+              username: (firebaseUser as any).displayName || (firebaseUser as any).email?.split("@")[0] || "user",
+              email: (firebaseUser as any).email || "",
             });
             setUser(newUser);
           }

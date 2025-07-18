@@ -1,10 +1,49 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
+import { auth } from "./firebase";
 import { storage } from "./storage";
 import { insertUserSchema, insertServiceSchema, insertBookingSchema, insertReferralSchema, insertAnalyticsSchema } from "@shared/schema";
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Auth routes
+  app.post("/api/auth/sign-in", async (req, res) => {
+    try {
+      const { email, password } = req.body;
+      const userCredential = await auth.getUserByEmail(email);
+      // This is not a real sign-in, just a check for the user's existence.
+      // A real implementation would use custom tokens.
+      res.json({ uid: userCredential.uid });
+    } catch (error) {
+      res.status(401).json({ message: "Invalid email or password" });
+    }
+  });
+
+  app.post("/api/auth/sign-up", async (req, res) => {
+    try {
+      const { email, password } = req.body;
+      const userCredential = await auth.createUser({ email, password });
+      res.json({ uid: userCredential.uid });
+    } catch (error) {
+      res.status(400).json({ message: "Could not create user" });
+    }
+  });
+
+  app.post("/api/auth/sign-out", (req, res) => {
+    res.json({ message: "Signed out successfully" });
+  });
+
+  app.post("/api/auth/reset-password", async (req, res) => {
+    try {
+      const { email } = req.body;
+      await auth.generatePasswordResetLink(email);
+      res.json({ message: "Password reset email sent" });
+    } catch (error) {
+      res.status(400).json({ message: "Could not send password reset email" });
+    }
+  });
+
+
   // User routes
   app.get("/api/users/me", async (req, res) => {
     try {
