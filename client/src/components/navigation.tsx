@@ -19,6 +19,7 @@ export function Navigation() {
     { href: "/marketplace", label: "Marketplace" },
     { href: "/membership", label: "Membership" },
     { href: "/analytics", label: "Analytics" },
+    { href: "/contact", label: "Contact" },
   ];
 
   const isActive = (href: string) => {
@@ -34,7 +35,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
             <img 
-              src="/attached_assets/WhatsApp Image 2025-05-10 at 22.26.29_b13f022c.jpg" 
+              src="/logo.png"
               alt="MemeMakers Hub"
               className="w-10 h-10 rounded-lg object-contain"
             />
